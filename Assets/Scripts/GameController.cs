@@ -1,0 +1,16 @@
+﻿using System;
+using UnityEngine;
+
+[RequireComponent(typeof(MazeConstructor))]
+
+public class GameController : MonoBehaviour
+{
+    private MazeConstructor generator;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        generator = GetComponent<MazeConstructor>();
+        generator.GenerateNewMaze(13, 15);
+    }
+}
